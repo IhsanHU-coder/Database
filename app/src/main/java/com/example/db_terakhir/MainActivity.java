@@ -1,7 +1,9 @@
 package com.example.db_terakhir;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -75,5 +77,10 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Error: " + t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
+
+    }
+    public void back(View view) {
+        Intent intent = new Intent(MainActivity.this, Menu.class);
+        startActivity(intent);
     }
 }
